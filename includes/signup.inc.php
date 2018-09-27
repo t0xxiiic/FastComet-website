@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
 				//Hashing the password
 				$hashedPwd = password_hash($password, PASSWORD_DEFAULT);
 				//Insert the user into the database
-				$sql = "INSERT INTO users (email,password) VALUES ('$email','$hashedPwd');";
+				$sql = "INSERT INTO users (email,password) VALUES ('$email','$password');";
 				mysqli_query($connection, $sql);
 				header("Location: ../signup.php?signup=success");
 				exit();
