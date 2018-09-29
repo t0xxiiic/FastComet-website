@@ -235,11 +235,8 @@ header .nav-login a{
 	background-color: #111;
 }
 
-.main-container ul li{
-	float: left;
-	list-style: none;
-}
 
-.textareaList{
+
+.signup-form ul li{
 	list-style: none;
 }

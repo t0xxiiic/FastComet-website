@@ -9,14 +9,16 @@
  			
  			<?php 
  				if (isset($_SESSION['u_id'])) {
- 					echo '<ul class="textareaList">
- 							<li>
- 								<textarea rows="5" cols="50"></textarea>
- 							</li>
- 							<li>
- 								<button>Submit</button>
- 							</li>
- 						</ul>';
+ 					echo '<form class="signup-form" action="includes/uploadPost.inc.php" method="POST">
+ 							<ul>
+ 								<li>
+ 									<textarea rows="5" cols="50" name = "postText"></textarea>
+ 								</li>
+ 								<li>
+ 									<button type = "submit" name = "submit">Submit</button>
+ 								</li>
+ 							</ul>
+ 						</form>';
  					$sql = "SELECT users.email, posts.date, posts.post FROM posts INNER JOIN users ON posts.userID = users.id ORDER BY posts.date DESC;";
 					$result = mysqli_query($connection, $sql);
 					if (mysqli_num_rows($result) > 0) {
