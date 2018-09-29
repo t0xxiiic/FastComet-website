@@ -234,3 +234,12 @@ header .nav-login a{
 .signup-form button:hover{
 	background-color: #111;
 }
+
+.main-container ul li{
+	float: left;
+	list-style: none;
+}
+
+.textareaList{
+	list-style: none;
+}
