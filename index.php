@@ -25,7 +25,7 @@
     				// output data of each row
 						echo "<br><br>";
     					while($row = mysqli_fetch_assoc($result)) {
-        					echo "User: " . $row["email"]. " -  " . $row["date"]. " - " . $row["post"]. "<br>";
+        					echo $row["email"]. " -  " . $row["date"]. " - " . $row["post"]. "<br>";
     					}
 					} else {
     					echo "0 results";
